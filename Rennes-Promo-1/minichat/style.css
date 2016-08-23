@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: 'PT Mono', monospace;
+    border-top: 4px solid #222;
+    border-bottom: 4px solid #222;
+}
+
+header, footer {
+    padding: 20px;
+    background-color: #333;
+}
+
+header {
+    border-bottom: 1px dashed red;
+    border-top: 1px dashed red;
+}
+
+footer {
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+}
+
+.flexbox {
+    padding: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 3px solid #222;
+}
+
+section, aside {
+    border: 1px dashed red;
+    margin: 20px;
+    padding: 20px;
+}
+
+section {
+    width: 80%;
+}
+
+aside {
+    width: 20%;
+    height: 100vh;
+    background-image: url(rules.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+label {
+    display: block;
+}
+
+textarea {
+    padding: 10px;
+    color: #666;
+}
+
+#deathnote-style {
+    background-color: #ddd;
+    color: #111;
+    padding: 40px;
+    margin: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
+}
+
+.death {
+    margin: 20px auto;
+}
