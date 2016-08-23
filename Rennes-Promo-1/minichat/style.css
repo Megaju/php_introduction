@@ -46,6 +46,7 @@ footer {
 }
 
 section, aside {
+    outline: 10px solid #111;
     border: 1px dashed red;
     margin: 20px;
     padding: 20px;
