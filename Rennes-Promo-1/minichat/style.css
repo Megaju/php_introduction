@@ -10,6 +10,9 @@ body {
     font-family: 'PT Mono', monospace;
     border-top: 4px solid #222;
     border-bottom: 4px solid #222;
+    background-image: url(bg.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 
 header, footer {
@@ -39,6 +42,7 @@ section, aside {
     border: 1px dashed red;
     margin: 20px;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 section {
@@ -53,13 +57,32 @@ aside {
     background-size: 100%;
 }
 
+form {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #666;
+}
+
 label {
     display: block;
+    width: 50%;
+    margin: 10px auto;
+    color: #666;
+    font-weight: 700;
+    border-bottom: 1px solid #666;
+}
+
+input {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    border: 0;
 }
 
 textarea {
     padding: 10px;
     color: #666;
+    border: 0;
 }
 
 #deathnote-style {
@@ -74,4 +97,8 @@ textarea {
 
 .death {
     margin: 20px auto;
+}
+
+.name {
+    text-transform: capitalize;
 }

@@ -38,7 +38,7 @@
                 <label for="name">Nom</label>
                 <input type="text" name="nom" id="nom">
                 <label for="message">Cause de la mort</label>
-                <textarea name="message" id="message" cols="30" rows="10">Crise cardique.</textarea>
+                <textarea name="message" id="message" cols="30" rows="10">Crise cardiaque.</textarea>
                 <label for="date">Date du décès</label>
                 <input type="date" name="date" id="date">
                 <input type="submit">
@@ -46,13 +46,13 @@
             
             <div id="deathnote-style">
             <?php
-            // Récupération des 5 derniers messages
-            $reponse = $bdd->query('SELECT nom, message, date FROM deathnote ORDER BY ID DESC LIMIT 0, 5');
+            // Récupération des 50 derniers messages
+            $reponse = $bdd->query('SELECT nom, message, date FROM deathnote ORDER BY ID DESC LIMIT 0, 50');
 
             // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
             while ($donnees = $reponse->fetch())
             {
-                echo '<p class="death"><strong>Nom :</strong> ' . htmlspecialchars($donnees['nom']) . ' <strong>Cause :</strong> ' . htmlspecialchars($donnees['message']) . ' <strong>Date:</strong> ' . htmlspecialchars($donnees['date']) . '</p>';
+                echo '<p class="death"><strong>Nom :</strong> <span class="name">' . htmlspecialchars($donnees['nom']) . ' </span><strong>Cause :</strong> ' . htmlspecialchars($donnees['message']) . ' <strong>Date:</strong> ' . htmlspecialchars($donnees['date']) . '</p>';
             }
 
             $reponse->closeCursor();
