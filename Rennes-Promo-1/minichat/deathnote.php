@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Deathnote</title>
+    <title>DEATH NOTE</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="DEATHNOTE_Font/stylesheet.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
             <?php
             try
             {
-                $bdd = new PDO('mysql:host=localhost;dbname=minichat;charset=utf8', 'root', 'facesimplon');
+                $bdd = new PDO('mysql:host=localhost;dbname=deathnotebdd;charset=utf8', 'root', '');
             }
             catch(Exception $e)
             {
@@ -23,8 +24,8 @@
             ?>
    
     <header>
-        <h1>Deathnote</h1>
-        <i>Bienvenue dans le Deathnote - les gens dont les noms sont écrit ici sont condamnés à mourir...</i>
+        <h1>Death note</h1>
+        <i>Ryuk se modernise un peu et a décidé de mettre en ligne un death note virtuel.. il le partage avec nous, pauvres mortels que nous sommes... bonne écriture à tous !</i>
     </header>
 
     <div class="flexbox">
@@ -67,7 +68,7 @@
     </div>
 
     <footer>
-        (c)DEATHNOTE, 2016. J.Malle ...
+        (c)DEATHNOTE, 2016. by J
     </footer>
 </body>
 
