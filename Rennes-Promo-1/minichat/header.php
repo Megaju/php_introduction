@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="DEATHNOTE_Font/stylesheet.css">
 </head>
 
+<?php include('apple.php'); ?>
+
 <body>
     <!-- connection à la bdd -->
             <?php

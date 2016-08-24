@@ -3,31 +3,58 @@
 
 <!-- nouvelles et ses commentaires -->
 <?php
-            // Récupération de la news souhaité
-            $reponse = $bdd->query('SELECT id FROM news ORDER BY ID DESC LIMIT 0, 1');
-            $reponse = $bdd->query('SELECT id, id_news, author, comment, date_comment FROM comments ORDER BY ID DESC LIMIT 0, 1');
+// Récupération du billet
+$req = $bdd->prepare('SELECT id, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation FROM news WHERE id = ?');
+$req->execute(array($_GET['news_number']));
+$donnees = $req->fetch();
+?>
 
-            // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
-            while ($donnees = $reponse->fetch())
-            {   
-                echo '<div class="new">' .
-                    '<h3 class="new-title">' .
-                    '#' . htmlspecialchars($donnees['id']) . ' ' .
-                        htmlspecialchars($donnees['title']) .
-                    '</h3>' .
-                    '<i class="new-date">Le ' .
-                        htmlspecialchars($donnees['date_creation']) . 
-                    '</i>' .
-                    '<p class="new-content">' .
-                    htmlspecialchars($donnees['content']) .
-                    '</p>' .
-                    '<a href="#">Commentaires</a>' .
-                    '</div>';
-            }
+<div class="new">
+    <h3 class="new-title">
+        <?php echo '#' . htmlspecialchars($donnees['id']) . ' ' . htmlspecialchars($donnees['title']); ?>
+        <i class="new-date date-float-r">le <?php echo $donnees['date_creation']; ?></i>
+    </h3>
+    
+    <p class="new-content">
+    <?php
+    echo nl2br(htmlspecialchars($donnees['content']));
+    ?>
+    </p>
+</div>
 
-            $reponse->closeCursor();
+<!-- commentaires -->
+<section class="new">
+<h2>Commentaires</h2>
+<?php
+$req->closeCursor(); // IMPORTANT : on libère le curseur pour la prochaine requête
 
-            ?>
+// Récupération des commentaires
+$req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y à %Hh%imin%ss\') AS date_comment FROM comments WHERE id_news = ? ORDER BY date_comment');
+$req->execute(array($_GET['news_number']));
 
+while ($donnees = $req->fetch())
+{
+?>
+
+<div class="comment">
+<p class="user"><strong><?php echo htmlspecialchars($donnees['author']); ?></strong> le <?php echo $donnees['date_comment']; ?></p>
+<p><?php echo nl2br(htmlspecialchars($donnees['comment'])); ?></p>
+</div>
+
+<?php
+} // Fin de la boucle des commentaires
+$req->closeCursor();
+?>
+
+<!-- formulaire de commentaire -->
+<form action="postacomment.php" method="post">
+    <label for="author">Pseudo :</label>
+    <input type="text" name="author" id="author">
+    <label for="comment"></label>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    <input type="submit">
+</form>
+
+</section>
 
 <?php include('footer.php'); ?>

@@ -1,1 +1,1 @@
-<!-- affiche en haut à droite de l'écran le nombre de pommes que l'on a donné à Ryuk. -->
+<?php setcookie('apple', 0, time() + 365*24*360000); ?>

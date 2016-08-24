@@ -155,6 +155,20 @@ textarea {
         color: #999;
         font-size: 12px;
     }
+.date-float-r {
+    vertical-align: baseline;
+    float: right;
+}
+
+.comment {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #666;
+}
+
+.comment .user {
+    color: #f00;
+}
 
 #slogan {
     border-bottom: 1px solid #666;
