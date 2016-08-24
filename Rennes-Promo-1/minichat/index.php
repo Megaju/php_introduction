@@ -3,7 +3,7 @@
 
 
 <style>
-    h2 {
+    .last-names h2 {
         text-align: center;
     }
     

@@ -131,6 +131,31 @@ textarea {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
 }
 
+.new {
+        width: 66.6vw;
+        padding: 20px;
+        margin: 50px auto;
+        background-color: #222;
+        color: #eee;
+        border: 1px dashed red;
+        outline: 6px solid #222;
+    }
+    
+    .new a {
+        display: block;
+        margin: 20px 0 0 0;
+        color: #f00;
+    }
+    
+    .new-title {
+        margin: 0 0 10px 0;
+    }
+    
+    .new-date {
+        color: #999;
+        font-size: 12px;
+    }
+
 #slogan {
     border-bottom: 1px solid #666;
 }
