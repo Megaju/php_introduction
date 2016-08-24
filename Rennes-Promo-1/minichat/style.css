@@ -1,14 +1,15 @@
+/*
+Site: write in the death note
+URL: writeinthedeathnote.kijewoku.com
+Author: Julien Malle
+Version: 0.4
+*/
+
+/* ------ GENERAL ----- */
 * {
     padding: 0;
     margin: 0;
     vertical-align: top;
-}
-
-h1 {
-    font-size: 46px;
-    font-weight: 400;
-    font-family: "DEATHNOTE Font", monospace;
-    text-transform: uppercase;
 }
 
 html {
@@ -23,21 +24,96 @@ body {
     border-bottom: 4px solid #222;
 }
 
-header, footer {
+header {
     padding: 20px;
     background-color: #333;
-}
-
-header {
     border-bottom: 1px dashed red;
     border-top: 1px dashed red;
+}
+
+section {
+    width: 75%;
+    outline: 10px solid rgba(0, 0, 0, 0.5);
+    border: 1px dashed red;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+aside {
+    width: 25%;
+    height: 100vh;
+    outline: 10px solid rgba(0, 0, 0, 0.5);
+    border: 1px dashed red;
+    margin: 20px;
+    padding: 20px;
+    background-image: url(rules.jpg);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 100%;
+    background-color: #000;
 }
 
 footer {
+    padding: 20px;
+    background-color: #333;
+    height: 30vh;
+    text-align: center;
     border-top: 1px dashed red;
     border-bottom: 1px dashed red;
 }
 
+/* ----- TEXT ----- */
+h1 {
+    font-size: 46px;
+    font-weight: 400;
+    font-family: "DEATHNOTE Font", monospace;
+    text-transform: uppercase;
+}
+
+.last-names h2 {
+    text-align: center;
+}
+
+#slogan {
+    border-bottom: 1px solid #666;
+}
+
+/* ----- LINKS ------ */
+a.actu {
+    width: 200px;
+    text-decoration: none;
+    color: #666;
+    display: block;
+    margin: 20px auto;
+}
+
+a.button {
+    display: block;
+    width: 30%;
+    height: 120px;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 120px;
+    color: red;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #444;
+    outline: 6px solid #444;
+    border: 1px dashed red;
+    transition: .6s;
+}
+    
+a.button:hover {
+    border-color: aqua;
+    background-color: #ddd;
+    outline-color: #ddd;
+    color: aqua;
+    transition: .6s;
+}
+
+/* ----- NAVIGATION ----- */
 nav {
     text-align: center;
 }
@@ -63,44 +139,8 @@ nav ul li:hover a {
     color: red;
 }
 
-.flexbox {
-    padding: 40px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    border: 3px solid #222;
-}
-
-a.actu {
-    width: 200px;
-    text-decoration: none;
-    color: #666;
-    display: block;
-    margin: 20px auto;
-}
-
-section, aside {
-    outline: 10px solid rgba(0, 0, 0, 0.5);
-    border: 1px dashed red;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-section {
-    width: 75%;
-}
-
-aside {
-    width: 25%;
-    height: 100vh;
-    background-image: url(rules.jpg);
-    background-repeat: no-repeat;
-    background-position: center 20px;
-    background-size: 100%;
-    background-color: #000;
-}
-
+/* ----- FORMS ----- */
+/* form de base */
 form {
     padding: 20px;
     text-align: center;
@@ -128,79 +168,32 @@ textarea {
     color: #666;
     border: 0;
 }
-
-#deathnote-style {
-    background-color: #ddd;
-    color: #111;
-    padding: 40px;
-    margin: 20px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 20px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
+/* autres form */
+.new {
+    width: 66.6vw;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #222;
+    color: #eee;
+    border: 1px dashed red;
+    outline: 6px solid #222;
+}
+    
+.new a {
+    display: block;
+    margin: 20px 0 0 0;
+    color: #f00;
+}
+    
+.new-title {
+    margin: 0 0 10px 0;
+}
+    
+.new-date {
+    color: #999;
+    font-size: 12px;
 }
 
-.last-names h2 {
-        text-align: center;
-    }
-    
-    a.button {
-        display: block;
-        width: 30%;
-        height: 120px;
-        margin: 50px auto;
-        text-align: center;
-        line-height: 120px;
-        color: red;
-        font-size: 24px;
-        font-weight: 500;
-        text-decoration: none;
-        background-color: #444;
-        outline: 6px solid #444;
-        border: 1px dashed red;
-        transition: .6s;
-    }
-    
-    a.button:hover {
-        border-color: aqua;
-        background-color: #ddd;
-        outline-color: #ddd;
-        color: aqua;
-        transition: .6s;
-    }
-    
-    .last-names {
-        padding: 6px 6px 6px 6px;
-        width: 666px;
-        margin: 66px auto;
-        color: #222;
-        background-color: #eee;
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
-    }
-
-.new {
-        width: 66.6vw;
-        padding: 20px;
-        margin: 50px auto;
-        background-color: #222;
-        color: #eee;
-        border: 1px dashed red;
-        outline: 6px solid #222;
-    }
-    
-    .new a {
-        display: block;
-        margin: 20px 0 0 0;
-        color: #f00;
-    }
-    
-    .new-title {
-        margin: 0 0 10px 0;
-    }
-    
-    .new-date {
-        color: #999;
-        font-size: 12px;
-    }
 .date-float-r {
     vertical-align: baseline;
     float: right;
@@ -216,14 +209,39 @@ textarea {
     color: #f00;
 }
 
-#slogan {
-    border-bottom: 1px solid #666;
-}
-
 .death {
     margin: 20px auto;
 }
 
 .name {
     text-transform: capitalize;
+}
+
+/* ----- BLOCS DU SITE ----- */
+/* pour le contenue central du site */
+.flexbox {
+    padding: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 3px solid #222;
+}
+/* style du bloc où sont les noms */
+#deathnote-style {
+    background-color: #ddd;
+    color: #111;
+    padding: 40px;
+    margin: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
+}
+/* bloc des derniers nom inscrit au niveau de index.php */
+.last-names {
+    padding: 6px 6px 6px 6px;
+    width: 666px;
+    margin: 66px auto;        
+    color: #222;
+    background-color: #eee;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
 }
