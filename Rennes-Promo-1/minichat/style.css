@@ -11,15 +11,16 @@ h1 {
     text-transform: uppercase;
 }
 
+html {
+    background: url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
 body {
     color: #fff;
-    background-color: #000;
     font-family: 'PT Mono', monospace;
     border-top: 4px solid #222;
     border-bottom: 4px solid #222;
-    background-image: url(bg.jpg);
-    background-position: center center;
-    background-size: cover;
 }
 
 header, footer {
