@@ -52,7 +52,7 @@ $req->closeCursor();
         <input type="text" name="author" id="author">
         <label for="comment">Commentaire</label>
         <textarea type="text" name="comment" id="comment" rows="10" cols="30"></textarea>
-        <input type="hidden" name="date_comment" id="date_comment" value="2016-12-12 00:00:00">
+        <input type="hidden" name="date_comment" id="date_comment" value="<?php echo date("Y-m-d H:i:s"); ?>">
         <input type="hidden" name="id_news" id="id_news" value="1">
         <input type="submit">
 </form>
