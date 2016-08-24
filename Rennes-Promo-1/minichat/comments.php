@@ -29,7 +29,7 @@ $donnees = $req->fetch();
 $req->closeCursor(); // IMPORTANT : on libère le curseur pour la prochaine requête
 
 // Récupération des commentaires
-$req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y à %Hh%imin%ss\') AS date_comment FROM comments WHERE id_news = ? ORDER BY date_comment');
+$req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y à %Hh%imin%ss\') AS date_comment FROM comments WHERE id_news = ? ORDER BY date_comment DESC LIMIT 0, 99');
 $req->execute(array($_GET['news_number']));
 
 while ($donnees = $req->fetch())

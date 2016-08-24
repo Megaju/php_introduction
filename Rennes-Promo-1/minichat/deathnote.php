@@ -8,10 +8,10 @@
 
             <!-- Formulaire à remplir -->
             <form action="post.php" method="post">
-                <label for="name">Nom</label>
-                <input type="text" name="nom" id="nom">
                 <label for="name">Prénom</label>
                 <input type="text" name="prenom" id="prenom">
+                <label for="name">Nom</label>
+                <input type="text" name="nom" id="nom">
                 <label for="message">Cause de la mort</label>
                 <textarea name="message" id="message" cols="30" rows="10">Crise cardiaque.</textarea>
                 <label for="dateofdeath">Date du décès</label>
