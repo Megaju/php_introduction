@@ -4,7 +4,8 @@
 <!-- nouvelles et ses commentaires -->
 <?php
             // Récupération de la news souhaité
-            $reponse = $bdd->query('SELECT id, title, content, date_creation FROM news ORDER BY ID DESC LIMIT 0, 1');
+            $reponse = $bdd->query('SELECT id FROM news ORDER BY ID DESC LIMIT 0, 1');
+            $reponse = $bdd->query('SELECT id, id_news, author, comment, date_comment FROM comments ORDER BY ID DESC LIMIT 0, 1');
 
             // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
             while ($donnees = $reponse->fetch())

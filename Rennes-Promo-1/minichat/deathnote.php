@@ -22,7 +22,7 @@
             <div id="deathnote-style">
             <?php
             // Récupération des 50 derniers messages
-            $reponse = $bdd->query('SELECT nom, prenom, message, dateofdeath FROM deathnote ORDER BY ID DESC LIMIT 0, 50');
+            $reponse = $bdd->query('SELECT nom, prenom, message, DATE_FORMAT(dateofdeath, \'%d/%m/%Y à %Hh%imin et %ss\') AS dateofdeath FROM deathnote ORDER BY ID DESC LIMIT 0, 50');
 
             // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
             while ($donnees = $reponse->fetch())

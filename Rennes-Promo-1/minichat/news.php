@@ -30,8 +30,3 @@
 
 
 <?php include('footer.php'); ?>
-
-
-<style>
-    
-</style>
