@@ -46,14 +46,17 @@ while ($donnees = $req->fetch())
 $req->closeCursor();
 ?>
 
-<!-- formulaire de commentaire -->
-<form action="postacomment.php" method="post">
-    <label for="author">Pseudo :</label>
-    <input type="text" name="author" id="author">
-    <label for="comment"></label>
-    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-    <input type="submit">
+<!-- formulaire d'envoie de message --> <!-- données : id_news + author + comment + date_comment -->
+<form action="post_comment.php" method="post">
+        <label for="author">Auteur</label>
+        <input type="text" name="author" id="author">
+        <label for="comment">Commentaire</label>
+        <textarea type="text" name="comment" id="comment" rows="10" cols="30"></textarea>
+        <input type="hidden" name="date_comment" id="date_comment" value="2016-12-12 00:00:00">
+        <input type="hidden" name="id_news" id="id_news" value="1">
+        <input type="submit">
 </form>
+
 
 </section>
 

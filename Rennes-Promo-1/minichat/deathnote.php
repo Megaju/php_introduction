@@ -27,14 +27,11 @@
             // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
             while ($donnees = $reponse->fetch())
             {
-                echo '<p class="death">
-                <strong>Nom :</strong> <span class="name">' . 
-                htmlspecialchars($donnees['nom']) . 
-                ' </span>' . 
-                '<strong>Prénom :</strong><span class="name">' .
+                echo '<p class="death"> - ' . '<span class="name">' .
                 htmlspecialchars($donnees['prenom']) .
-                ' </span>' .
-                '<strong>Cause :</strong> ' . 
+                ' ' .
+                htmlspecialchars($donnees['nom']) . '</span>' .
+                ' <strong>Cause :</strong> ' . 
                 htmlspecialchars($donnees['message']) . 
                 ' le ' . 
                 htmlspecialchars($donnees['dateofdeath']) . 

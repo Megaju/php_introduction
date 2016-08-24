@@ -13,21 +13,14 @@
 <?php include('apple.php'); ?>
 
 <body>
+    
     <!-- connection à la bdd -->
-            <?php
-            try
-            {
-                $bdd = new PDO('mysql:host=localhost;dbname=minichat;charset=utf8', 'root', 'facesimplon');
-                //$bdd = new PDO('mysql:host=localhost;dbname=deathnotebdd;charset=utf8', 'root', '');
-            }
-            catch(Exception $e)
-            {
-                    die('Erreur : '.$e->getMessage());
-            }
-            ?>
+    <?php include('connect_bdd.php'); ?>
+    
 <header>
     <h1>Death note</h1>
     <p id="slogan">Ryuk se modernise un peu et a décidé de mettre en ligne un death note virtuel.. il le partage avec nous, pauvres mortels que nous sommes... bonne écriture à tous !</p>
+    <!-- <p id="slogan">Ryuk s'ennuyait un peu... il décida aler d'apprendre à programmer et nous a concocter ce superbe death note en ligne ! Bonne écriture et réfléchisait bien aux conséquences de vos actes...</p> -->
         <nav>
             <ul>
                 <li><a href="index.php">accueil</a></li>
