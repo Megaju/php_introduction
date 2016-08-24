@@ -26,7 +26,5 @@
             $reponse->closeCursor();
 
             ?>
-            
-            <a href="write_news_mdp.php" class="actu">écrire une actu</a>
 
 <?php include('footer.php'); ?>
