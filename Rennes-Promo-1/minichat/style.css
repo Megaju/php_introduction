@@ -71,6 +71,14 @@ nav ul li:hover a {
     border: 3px solid #222;
 }
 
+a.actu {
+    width: 200px;
+    text-decoration: none;
+    color: #666;
+    display: block;
+    margin: 20px auto;
+}
+
 section, aside {
     outline: 10px solid rgba(0, 0, 0, 0.5);
     border: 1px dashed red;
