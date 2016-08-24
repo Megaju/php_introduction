@@ -52,9 +52,7 @@
         </aside>
     </div>
 
-    <footer>
-        (c)DEATHNOTE, 2016. by J
-    </footer>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

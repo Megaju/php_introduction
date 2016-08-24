@@ -38,6 +38,31 @@ footer {
     border-bottom: 1px dashed red;
 }
 
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 20px 0 0 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul li:hover a {
+    color: red;
+}
+
 .flexbox {
     padding: 40px;
     display: flex;
@@ -104,6 +129,10 @@ textarea {
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkIADWbz3zP9DbhJFxVCG2EIAHD4hBKIhA8kSHIwAFXCc6ZL2aaQAAAABJRU5ErkJggg==);
+}
+
+#slogan {
+    border-bottom: 1px solid #666;
 }
 
 .death {

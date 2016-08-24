@@ -2,3 +2,6 @@
 
 
 <!-- nouvelles et ses commentaires -->
+
+
+<?php include('footer.php'); ?>

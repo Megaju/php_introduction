@@ -25,9 +25,10 @@
             ?>
 <header>
     <h1>Death note</h1>
-    <i>Ryuk se modernise un peu et a décidé de mettre en ligne un death note virtuel.. il le partage avec nous, pauvres mortels que nous sommes... bonne écriture à tous !</i>
+    <p id="slogan">Ryuk se modernise un peu et a décidé de mettre en ligne un death note virtuel.. il le partage avec nous, pauvres mortels que nous sommes... bonne écriture à tous !</p>
         <nav>
             <ul>
+                <li><a href="index.php">accueil</a></li>
                 <li><a href="deathnote.php">écrire un nom</a></li>
                 <li><a href="news.php">les nouvelles</a></li>
             </ul>
