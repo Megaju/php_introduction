@@ -49,7 +49,7 @@
             <ul class="pagination">
                 <!-- precedent -->
                 <?php
-                    echo '<li><a href="?p=' . ($current - 1) . '">' . '<<' . '</a></li>';   
+                    echo '<li><a href="?p=' . ($current - 1) . '">' . '&laquo;' . '</a></li>';   
                 ?>
                 <!-- numeros -->
                 <?php
@@ -63,7 +63,7 @@
                 ?>
                 <!-- suivant -->
                 <?php
-                    echo '<li><a href="?p=' . ($current + 1) . '">' . '>>' . '</a></li>';   
+                    echo '<li><a href="?p=' . ($current + 1) . '">' . '&raquo;' . '</a></li>';   
                 ?>
             </ul>
             

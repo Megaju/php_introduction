@@ -139,6 +139,36 @@ nav ul li:hover a {
     color: red;
 }
 
+/* nav pagination */
+ul.pagination {
+    list-style: none;
+    text-align: center;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    width: 15px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    background-color: #222;
+    border: 1px solid #fff;
+}
+
+ul.pagination li.active a, ul.pagination li:hover a {
+    position: relative;
+    bottom: 1px;
+    color: #f00;
+    font-weight: 700;
+    border: 2px solid #f00;
+}
+
 /* ----- FORMS ----- */
 /* form de base */
 form {

@@ -25,17 +25,3 @@ if (isset($_GET['p']) && !empty($_GET['p']) && ctype_digit($_GET['p']) == 1) {
 $firstOfPage = ($current-1)*$perPage;
 
 ?>
-
-<?php
-
-echo '<p class="black">$total = ' . $total . '</p>';
-echo '<p class="black">$nbPage = ' . $nbPage . '</p>';
-echo '<p class="black">$current = ' . $current . '</p>';
-echo '<p class="black">$p = ' . $_GET['p'] . '</p>';
-echo '<p class="black">------------------------------</p>';
-echo '<p class="black">$firstOfPage = ' . $firstOfPage . '</p>';
-echo '<p class="black">$perPage = ' . $perPage . '</p>';
-
-?>
-
-<style>.black { background-color: black; color: white;}</style>
