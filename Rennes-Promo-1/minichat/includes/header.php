@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
 </head>
 
-<?php include('apple.php'); ?>
-
 <body>
     
     <!-- connection à la bdd -->
@@ -26,6 +24,7 @@
                 <li><a href="index.php">accueil</a></li>
                 <li><a href="deathnote.php">écrire un nom</a></li>
                 <li><a href="news.php">les nouvelles</a></li>
+                <li><a href="apple.php">pommes</a></li>
             </ul>
         </nav>
 </header>
