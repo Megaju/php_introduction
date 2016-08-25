@@ -80,6 +80,11 @@ h1 {
 }
 
 /* ----- LINKS ------ */
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
 a.actu {
     width: 200px;
     text-decoration: none;
