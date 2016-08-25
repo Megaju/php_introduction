@@ -43,26 +43,30 @@
             $reponse->closeCursor();
 
             ?>
+            </div>
             
+            <!-- PAGINATION -->
             <ul class="pagination">
-                <li></li>
-                
+                <!-- precedent -->
                 <?php
-                    for($i=1; $i<=$perPage; $i++){
+                    echo '<li><a href="?p=' . ($current - 1) . '">' . '<<' . '</a></li>';   
+                ?>
+                <!-- numeros -->
+                <?php
+                    for($i=1; $i<=$nbPage; $i++){
                         if($i == $current) {
-                            echo '<li class="active"><a href="#"></a></li>'
+                            echo '<li class="active"><a href="?p=' . $i . '">' . $i . '</a></li>';
+                        } else {
+                            echo '<li><a href="?p=' . $i . '">' . $i . '</a></li>';
                         }
+                    }
                 ?>
-                    <li></li>
+                <!-- suivant -->
                 <?php
-                    } //end boucle for
+                    echo '<li><a href="?p=' . ($current + 1) . '">' . '>>' . '</a></li>';   
                 ?>
-                
-                
-                <li></li>
             </ul>
             
-            </div>
         </section>
 
         <aside>
