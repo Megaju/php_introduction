@@ -1,6 +1,6 @@
-    <?php include('header.php'); ?>
+    <?php include('includes/header.php'); ?>
     
-    <?php include('pagination.php'); ?>
+    <?php include('includes/pagination.php'); ?>
 
     <div class="flexbox">
         <section>
@@ -9,7 +9,7 @@
             <h3>Tuer c'est faire un choix.</h3>
 
             <!-- Formulaire à remplir -->
-            <form action="post.php" method="post">
+            <form action="posts/post.php" method="post">
                 <label for="name">Prénom</label>
                 <input type="text" name="prenom" id="prenom">
                 <label for="name">Nom</label>
@@ -74,7 +74,7 @@
         </aside>
     </div>
 
-    <?php include('footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
 </body>
 
 </html>

@@ -1,8 +1,8 @@
 <?php 
         if ($_POST['mdp'] == 'lol') {
             ?>
-            <?php include('header.php'); ?>
-            <form action="post_news.php" method="post">
+            <?php include('includes/header.php'); ?>
+            <form action="posts/post_news.php" method="post">
                 <!-- titre de la news -->
                 <label for="title">Titre</label>
                 <input type="text" name="title" id="title">

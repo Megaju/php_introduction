@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
 <a href="deathnote.php" class="button">ALLER AU DEATHNOTE</a>
 
 <div class="last-names">
@@ -31,4 +31,4 @@
 </div>
 
 
-<?php include('footer.php'); ?>
+<?php include('includes/footer.php'); ?>

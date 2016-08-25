@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <!-- nouvelles et ses commentaires -->
 <?php
@@ -28,7 +28,7 @@ $donnees = $req->fetch();
 $req->closeCursor(); // IMPORTANT : on libère le curseur pour la prochaine requête
     
 // PAGINATION MESSAGES
-include('pagination_comments.php');
+include('includes/pagination_comments.php');
 
 // Récupération des commentaires
 $req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y à %Hh%imin%ss\') AS date_comment FROM comments WHERE id_news = ? ORDER BY date_comment DESC LIMIT ' . $firstOfPage . ',' . $perPage);
@@ -71,7 +71,7 @@ $req->closeCursor();
             </ul>
 
 <!-- formulaire d'envoie de message --> <!-- données : id_news + author + comment + date_comment -->
-<form action="post_comment.php" method="post">
+<form action="posts/post_comment.php" method="post">
         <label for="author">Auteur</label>
         <input type="text" name="author" id="author">
         <label for="comment">Commentaire</label>
@@ -85,4 +85,4 @@ $req->closeCursor();
 
 </section>
 
-<?php include('footer.php'); ?>
+<?php include('includes/footer.php'); ?>

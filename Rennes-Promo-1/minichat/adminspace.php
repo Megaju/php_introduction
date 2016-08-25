@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
     <section class="motdepasse">
     <h2>PAGE PROTÉGÉ PAR MOT DE PASSE</h2>
     <p>Si tu es moi tu connais le mot de passe, sinon merci de passer ton chemin, bye, passe un jour à la maison y a des p'tit gâteau des p'tits anges tout nus du coca et d'la vodka tagada.</p>
@@ -24,4 +24,4 @@
             overflow-x: hidden;
         }
     </style>
-<?php include('footer.php'); ?>
+<?php include('includes/footer.php'); ?>

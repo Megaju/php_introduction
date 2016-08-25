@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>DEATH NOTE</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="DEATHNOTE_Font/stylesheet.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
 </head>
 
 <?php include('apple.php'); ?>
