@@ -2,7 +2,7 @@
 
 $perPage = 5;
 
-$req = $bdd->query('SELECT COUNT(id_news) WHERE id_news=' . $_GET['news_number'] . ' AS total FROM comments'); //cibler les comments avec le bon "id_news" puis c'est ok.
+$req = $bdd->query('SELECT COUNT(id_news) AS total FROM comments WHERE id_news=' . $_GET['news_number']); //cibler les comments avec le bon "id_news" puis c'est ok.
 $result = $req->fetch();
 $total = $result['total'];
 

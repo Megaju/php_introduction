@@ -26,13 +26,13 @@ $donnees = $req->fetch();
 <h2>Commentaires</h2>
 <?php
 $req->closeCursor(); // IMPORTANT : on libère le curseur pour la prochaine requête
+    
+// PAGINATION MESSAGES
+include('pagination_comments.php');
 
 // Récupération des commentaires
 $req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y à %Hh%imin%ss\') AS date_comment FROM comments WHERE id_news = ? ORDER BY date_comment DESC LIMIT ' . $firstOfPage . ',' . $perPage);
 $req->execute(array($_GET['news_number']));
-
-// PAGINATION MESSAGES
-include('pagination_comments.php');
 
 while ($donnees = $req->fetch())
 {
@@ -52,21 +52,21 @@ $req->closeCursor();
             <ul class="pagination">
                 <!-- precedent -->
                 <?php
-                    echo '<li><a href="?p=' . ($current - 1) . '">' . '&laquo;' . '</a></li>';   
+                    echo '<li><a href="?news_number=' . $_GET['news_number'] . '&p=' . ($current - 1) . '">' . '&laquo;' . '</a></li>';   
                 ?>
                 <!-- numeros -->
                 <?php
                     for($i=1; $i<=$nbPage; $i++){
                         if($i == $current) {
-                            echo '<li class="active"><a href="?p=' . $i . '">' . $i . '</a></li>';
+                            echo '<li class="active"><a href="?news_number=' . $_GET['news_number'] . '&p=' . $i . '">' . $i . '</a></li>';
                         } else {
-                            echo '<li><a href="?p=' . $i . '">' . $i . '</a></li>';
+                            echo '<li><a href="?news_number=' . $_GET['news_number'] . '&p=' . $i . '">' . $i . '</a></li>';
                         }
                     }
                 ?>
                 <!-- suivant -->
                 <?php
-                    echo '<li><a href="?p=' . ($current + 1) . '">' . '&raquo;' . '</a></li>';   
+                    echo '<li><a href="?news_number=' . $_GET['news_number'] . '&p=' . ($current + 1) . '">' . '&raquo;' . '</a></li>';   
                 ?>
             </ul>
 
