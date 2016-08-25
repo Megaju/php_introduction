@@ -1,4 +1,6 @@
     <?php include('header.php'); ?>
+    
+    <?php include('pagination.php'); ?>
 
     <div class="flexbox">
         <section>
@@ -22,7 +24,7 @@
             <div id="deathnote-style">
             <?php
             // Récupération des 50 derniers messages
-            $reponse = $bdd->query('SELECT nom, prenom, message, DATE_FORMAT(dateofdeath, \'%d/%m/%Y à %Hh%imin et %ss\') AS dateofdeath FROM deathnote ORDER BY ID DESC LIMIT 0, 50');
+            $reponse = $bdd->query('SELECT nom, prenom, message, DATE_FORMAT(dateofdeath, \'%d/%m/%Y à %Hh%imin et %ss\') AS dateofdeath FROM deathnote ORDER BY ID DESC LIMIT ' . $firstOfPage . ',' . $perPage);
 
             // /!\IMPORTANT/!\ Affichage de chaque message (données protégées par htmlspecialchars) /!\IMPORTANT/!\
             while ($donnees = $reponse->fetch())
@@ -41,6 +43,25 @@
             $reponse->closeCursor();
 
             ?>
+            
+            <ul class="pagination">
+                <li></li>
+                
+                <?php
+                    for($i=1; $i<=$perPage; $i++){
+                        if($i == $current) {
+                            echo '<li class="active"><a href="#"></a></li>'
+                        }
+                ?>
+                    <li></li>
+                <?php
+                    } //end boucle for
+                ?>
+                
+                
+                <li></li>
+            </ul>
+            
             </div>
         </section>
 
