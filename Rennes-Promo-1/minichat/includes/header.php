@@ -22,6 +22,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">couverture</a></li>
+                <li><a href="/php_introduction/Rennes-Promo-1/minichat/how_to_use_it/I.php">règles</a></li>
                 <li><a href="deathnote.php">écrire_un_nom</a></li>
                 <li><a href="news.php">actualités</a></li>
                 <li><a href="news.php">top_des_éxécutions</a></li>
